@@ -1,0 +1,84 @@
+@font-face
+{
+    font-family: rubik;
+    src: url('Rubik-VariableFont_wght.ttf') format('truetype');
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: rubik;
+    color: #fdf4e8;
+    background-color: #6455ae;
+}
+
+img {
+   
+    height: 100px;
+}
+.container {
+    text-align: center;
+}
+
+.tabuleiro {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-template-rows: repeat(3, 100px);
+    gap: 5px;
+    margin: 20px auto;
+}
+
+.casa {
+    width: 100px;
+    height: 100px;
+    background-color: #fdf4e8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.5em; /* Tamanho maior para o X e a Bola */
+    cursor: pointer;
+    border: 2px solid #6455ae;
+    border-radius: 20px;
+}
+
+.casa.x::before {
+    content: "X";
+    color: #eeb72f;
+}
+
+.casa.bola::before {
+    content: "O";
+    color: #fa6666;
+}
+
+.borda {
+    margin-top: 20px;
+    font-size: 1.5em;
+}
+
+.borda.x::before {
+    content: "Vez do X";
+    font-family: rubik;
+    color: #eeb72f;
+    background-color: #fdf4e8;
+    border-radius: 5px;
+}
+
+.borda.bola::before {
+    font-family: rubik;
+    content: "Vez da Bola";
+    color: #fa6666;
+    background-color: #fdf4e8;
+    border-radius: 5px;
+}
+
+button#reiniciar {
+    margin-top: 15px;
+    border: solid 1px #fdf4e8;
+    border-radius: 20px;
+    color: #fdf4e8;
+    background-color: #6455ae;
+}
